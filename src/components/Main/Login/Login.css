@@ -1,0 +1,144 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* CSS Geral do Form */
+form {
+    z-index: 999;
+    display: grid !important;
+    width: 41%;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    margin-right: 80px;
+}
+
+/* Container do Form */
+#form-container {
+    width: 672px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-container * {
+    width: 100%;
+}
+
+/* Logo do Login */
+#form-container #header-logo {
+    width: 8rem !important;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+/* H2 Do Login */
+#sign-text {
+    padding: 0;
+    margin: 0 0 24px 0;
+    font-size: clamp(1rem, 1rem + 3vw ,3rem);
+    text-align: center;
+    color: #111827;
+}
+
+/* Inputs do Login */
+#inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+#inputs input {
+    width: auto;
+    padding: 9px 12px;
+    border: 1px solid #D1D5DB;
+    margin: 0;
+    font-size: clamp(.9rem, 1vw, 1.3rem);
+}
+
+#inputs input:nth-child(1) {
+    border-radius: 5px 5px 0px 0px;
+}
+
+#inputs input:nth-child(2) {
+    border-radius: 0 0 5px 5px;
+}
+
+/* Botão de Remember e Esqueci minha Senha */
+#important-buttons {
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: row;
+}
+
+#important-buttons a {
+    text-align: right;
+    text-decoration: none;
+    color: #717D96;
+}
+
+#remember-box {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#remember-box #remember {
+    height: auto;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    margin-right: .5rem;
+}
+
+#remember-box label {
+    color: #111827;
+    font-size: 1.2rem;
+    font-family: Inter, sans-serif;
+}
+
+#remember-box label, #remember-box input {
+    width: auto;
+}
+
+/* Botão de Submit do Login */
+#login-btn {
+    position: relative;
+    background: #2D3648;
+    border-radius: 5px;
+    color: #ffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: none;
+    align-items: center;
+    padding: 11px 19px;
+}
+
+#login-btn svg {
+    position: absolute;
+    left: 19px;
+}
+
+#login-btn * {
+    width: auto;
+    margin: 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1570px) {
+    form {
+        display: block;
+        width: 100%;
+        justify-content: center;
+        height: calc(100% - 176px);
+        position: absolute;
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width: 724px) {
+    #form-container { 
+        margin: 10px;
+        width: auto;
+    }
+}

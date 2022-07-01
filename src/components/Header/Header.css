@@ -1,0 +1,101 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body {
+    overflow-x: hidden;
+}
+
+/* CSS Geral do Header */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 88px;
+    padding: 0 5rem;
+    font-family: Inter, sans-serif;
+}
+
+/* Barra de navegação */
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 86px;
+}
+
+nav ul li a {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2d3648;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* Burger Menu */
+#nav-menu {
+    display: none;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    position: relative;
+}
+
+.burger .lines:nth-child(1) {
+    background-color: transparent;
+}
+.burger .lines:nth-child(2) {
+    transform: rotate(135deg);
+    transition: .1s ease-in-out;
+}
+.burger .lines:nth-child(3) {
+    transform: translateY(-9px) rotate(-135deg);
+    transition: 3.s ease-in-out;
+}
+
+.lines {
+    height:5px;
+    width: 1.6rem;
+    background: #2D3648;
+    margin: 4px;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+}
+
+/* Media Query */
+@media screen and (max-width: 858px) {
+
+    #nav-menu {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 88px;
+        right: 0;
+
+        flex-direction: column;
+
+        padding: 2rem 0;
+        margin: 0;
+
+        height: calc(100% - 152px);
+        width: 70%;
+
+        text-align: center;
+        z-index: 9999;
+        background-color: #fff;
+        transform: translateX(25rem);
+        transition: .3s ease-in-out;
+    }
+
+    nav ul.activated {
+        transform: translateX(0);
+    }
+
+}
+
+@media screen and (max-width: 510px) {
+    header {
+        padding: 0 1.5rem !important;
+    }
+}
